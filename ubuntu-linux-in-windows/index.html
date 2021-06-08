@@ -11,19 +11,21 @@
 <title>Как работать с Linux используя Windows | Гайды для программистов</title>
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Как работать с Linux используя Windows" />
-<meta name="author" content="Kirill Mokevnin" />
-<meta property="og:locale" content="ru_ru" />
-<meta name="description" content="Если вы только начали свой путь разработчика и до сих используете операционную систему семейства Microsoft Windows, то уже наверняка столкнулись с ситуацией, когда ваш инструментарий отличается от того, что установлено у большинства людей из этой профессии. Чаще всего проблемы начинаются при работе в командной строке. Дело в том, что Windows не является POSIX-совместимой операционной системой, поэтому в ней отсутсвует базовый набор прикладных программ, который необходим для разработки." />
-<meta property="og:description" content="Если вы только начали свой путь разработчика и до сих используете операционную систему семейства Microsoft Windows, то уже наверняка столкнулись с ситуацией, когда ваш инструментарий отличается от того, что установлено у большинства людей из этой профессии. Чаще всего проблемы начинаются при работе в командной строке. Дело в том, что Windows не является POSIX-совместимой операционной системой, поэтому в ней отсутсвует базовый набор прикладных программ, который необходим для разработки." />
+<meta name="author" content="Кирилл Мокевнин" />
+<meta property="og:locale" content="ru_RU" />
+<meta name="description" content="Инструкция по установке Ubuntu Linux внутри Windows с использованием различных технологий виртуализации." />
+<meta property="og:description" content="Инструкция по установке Ubuntu Linux внутри Windows с использованием различных технологий виртуализации." />
 <meta property="og:site_name" content="Гайды для программистов" />
 <meta property="og:image" content="/assets/images/ubuntu-linux-in-windows/virtualization_cover.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-12-28T00:00:00+00:00" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="/assets/images/ubuntu-linux-in-windows/virtualization_cover.png" />
 <meta property="twitter:title" content="Как работать с Linux используя Windows" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Кирилл Мокевнин" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","image":"/assets/images/ubuntu-linux-in-windows/virtualization_cover.png","headline":"Как работать с Linux используя Windows","dateModified":"2017-12-28T00:00:00+00:00","datePublished":"2017-12-28T00:00:00+00:00","description":"Если вы только начали свой путь разработчика и до сих используете операционную систему семейства Microsoft Windows, то уже наверняка столкнулись с ситуацией, когда ваш инструментарий отличается от того, что установлено у большинства людей из этой профессии. Чаще всего проблемы начинаются при работе в командной строке. Дело в том, что Windows не является POSIX-совместимой операционной системой, поэтому в ней отсутсвует базовый набор прикладных программ, который необходим для разработки.","mainEntityOfPage":{"@type":"WebPage","@id":"/ubuntu-linux-in-windows/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/hexlet_logo.png"},"name":"Kirill Mokevnin"},"url":"/ubuntu-linux-in-windows/","author":{"@type":"Person","name":"Kirill Mokevnin"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","image":"/assets/images/ubuntu-linux-in-windows/virtualization_cover.png","headline":"Как работать с Linux используя Windows","dateModified":"2017-12-28T00:00:00+00:00","datePublished":"2017-12-28T00:00:00+00:00","description":"Инструкция по установке Ubuntu Linux внутри Windows с использованием различных технологий виртуализации.","mainEntityOfPage":{"@type":"WebPage","@id":"/ubuntu-linux-in-windows/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/hexlet_logo.png"},"name":"Кирилл Мокевнин"},"url":"/ubuntu-linux-in-windows/","author":{"@type":"Person","name":"Кирилл Мокевнин"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -66,7 +68,7 @@
 
       <div class="container mb-4">
         <div class="d-flex flex-wrap justify-content-center py-3">
-          <a class="navbar-brand me-auto" href=""><img width="30" alt="Code Basics logo" src="assets/images/hexlet_logo.png"></a>
+          <a class="navbar-brand me-auto" href="/"><img width="30" alt="Code Basics logo" src="/assets/images/hexlet_logo.png"></a>
           <ul class="nav nav-pills">
             <li class="nav-item">
               <a class="nav-link" target="_blank" href="https://ru.hexlet.io/programs" alt="Программы обучения">Программы обучения</a>
@@ -79,39 +81,22 @@
         ================================================== -->
         <main class="container">
           <!-- Begin Article
-================================================== -->
+  ================================================== -->
 
-	<div class="row">
-		
+  <div class="row">
+    <div class="col-sm-8 mx-auto">
+      <!-- Post Featured Image -->
+      
+      <!-- End Featured Image -->
+      <div class="mainheading">
+        <h1 class="posttitle">Как работать с Linux используя Windows</h1> 
+      </div>
 
-		<!-- Post -->        
-        
-        
-		<div class="col-sm-8 mx-auto">
-            <!-- Post Featured Image -->
-			
-			<!-- End Featured Image -->
-			<div class="mainheading">             
-                
-                <!-- Post Categories -->
-                <div class="after-post-tags">
-                    <ul class="tags">
-                        
-                        
-                    </ul>
-                </div>
-                <!-- End Categories -->
-                
-                <!-- Post Title -->
-				<h1 class="posttitle">Как работать с Linux используя Windows</h1> 
-                
-			</div>
 
-			
 
-			<!-- Post Content -->
-			<div class="article-post serif-font">
-				<p>Если вы только начали свой путь разработчика и до сих используете операционную систему семейства Microsoft Windows, то уже наверняка столкнулись с ситуацией, когда ваш инструментарий отличается от того, что установлено у большинства людей из этой профессии. Чаще всего проблемы начинаются при работе в командной строке. Дело в том, что Windows не является <a href="https://ru.wikipedia.org/wiki/POSIX">POSIX</a>-совместимой операционной системой, поэтому в ней отсутсвует базовый набор прикладных программ, который необходим для разработки.</p>
+      <!-- Post Content -->
+      <div class="article-post serif-font">
+        <p>Если вы только начали свой путь разработчика и до сих используете операционную систему семейства Microsoft Windows, то уже наверняка столкнулись с ситуацией, когда ваш инструментарий отличается от того, что установлено у большинства людей из этой профессии. Чаще всего проблемы начинаются при работе в командной строке. Дело в том, что Windows не является <a href="https://ru.wikipedia.org/wiki/POSIX">POSIX</a>-совместимой операционной системой, поэтому в ней отсутсвует базовый набор прикладных программ, который необходим для разработки.</p>
 
 <p>Этот вопрос можно решить установкой какого-либо из многочисленных дистрибутивов Linux в качестве основной, либо альтернативной операционной системы. Для новичков есть способ проще и быстрее — технологии виртуализации. Об этом и поговорим.</p>
 
@@ -239,34 +224,36 @@ Enter new UNIX username:
 
 <p><em>Дмитрий Храпонов</em></p>
 
-                <div class="clearfix"></div>
-			</div>
+        <div class="clearfix"></div>
+      </div>
 
-            <!-- Prev/Next -->
-            <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
-              
-                <div class="col-md-6 rightborder pl-0">
-                    <a class="thepostlink" href="/vim/">&laquo; Зачем использовать vim</a>
-                </div>
-              
-              
-                <div class="col-md-6 text-right pr-0">
-                    <a class="thepostlink" href="/virtualization/">Что такое виртуализация &raquo;</a>
-                </div>
-              
-            </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
-            
-            <!-- Begin Comments
-            ================================================== -->
-            <section>
-            <div id="comments">                          
-                <section class="disqus">
+      
+      <div class="lead text-end my-5">
+        <i>Кирилл Мокевнин</i>
+      </div>
+      
+
+      <!-- Prev/Next -->
+      <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
+        
+        <div class="col-md-6 rightborder pl-0">
+          <a class="thepostlink" href="/vim/">&laquo; Зачем использовать vim</a>
+        </div>
+        
+        
+        <div class="col-md-6 text-right pr-0">
+          <a class="thepostlink" href="/virtualization/">Что такое виртуализация &raquo;</a>
+        </div>
+        
+      </div>
+      <!-- End Prev/Next -->
+
+
+      <!-- Begin Comments
+        ================================================== -->
+        <section>
+          <div id="comments">
+            <section class="disqus">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'hexlet-guides'; 
@@ -280,21 +267,16 @@ Enter new UNIX username:
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
- 
-            </div>
-            </section>
-            <!--End Comments
-            ================================================== -->
-            
-            
 
-		</div>
-		<!-- End Post -->
-		<!-- Sidebar -->
-	</div>
+          </div>
+        </section>
+    </div>
+    <!-- End Post -->
+    <!-- Sidebar -->
+  </div>
 
-<!-- End Article
-================================================== -->
+  <!-- End Article
+    ================================================== -->
 
         </main>
 

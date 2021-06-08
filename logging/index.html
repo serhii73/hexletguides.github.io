@@ -11,19 +11,21 @@
 <title>Что такое логирование? | Гайды для программистов</title>
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Что такое логирование?" />
-<meta name="author" content="Kirill Mokevnin" />
-<meta property="og:locale" content="ru_ru" />
-<meta name="description" content="Известно, что программисты проводят много времени, отлаживая свои программы, пытаясь разобраться, почему они не работают — или работают неправильно. Когда говорят про отладку, обычно подразумевают либо отладочную печать, либо использование специальных программ – дебагеров. С их помощью отслеживается выполнение кода по шагам, во время которого видно, как меняется содержимое переменных. Эти способы хорошо работают в небольших программах, но в реальных приложениях быстро становятся неэффективными." />
-<meta property="og:description" content="Известно, что программисты проводят много времени, отлаживая свои программы, пытаясь разобраться, почему они не работают — или работают неправильно. Когда говорят про отладку, обычно подразумевают либо отладочную печать, либо использование специальных программ – дебагеров. С их помощью отслеживается выполнение кода по шагам, во время которого видно, как меняется содержимое переменных. Эти способы хорошо работают в небольших программах, но в реальных приложениях быстро становятся неэффективными." />
+<meta name="author" content="Кирилл Мокевнин" />
+<meta property="og:locale" content="ru_RU" />
+<meta name="description" content="Журнал логов – специальное место, куда записывается информация о происходящих процессах в работающем коде. Приложение «логирует» туда информацию, которая, потенциально, может понадобиться для анализа различных ситуаций, возникающих в рабочем приложении: ошибках, задержках, сбоях." />
+<meta property="og:description" content="Журнал логов – специальное место, куда записывается информация о происходящих процессах в работающем коде. Приложение «логирует» туда информацию, которая, потенциально, может понадобиться для анализа различных ситуаций, возникающих в рабочем приложении: ошибках, задержках, сбоях." />
 <meta property="og:site_name" content="Гайды для программистов" />
 <meta property="og:image" content="/assets/images/logging/cover.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-18T00:00:00+00:00" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:image" content="/assets/images/logging/cover.png" />
 <meta property="twitter:title" content="Что такое логирование?" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Кирилл Мокевнин" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","image":"/assets/images/logging/cover.png","headline":"Что такое логирование?","dateModified":"2021-01-18T00:00:00+00:00","datePublished":"2021-01-18T00:00:00+00:00","description":"Известно, что программисты проводят много времени, отлаживая свои программы, пытаясь разобраться, почему они не работают — или работают неправильно. Когда говорят про отладку, обычно подразумевают либо отладочную печать, либо использование специальных программ – дебагеров. С их помощью отслеживается выполнение кода по шагам, во время которого видно, как меняется содержимое переменных. Эти способы хорошо работают в небольших программах, но в реальных приложениях быстро становятся неэффективными.","mainEntityOfPage":{"@type":"WebPage","@id":"/logging/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/hexlet_logo.png"},"name":"Kirill Mokevnin"},"url":"/logging/","author":{"@type":"Person","name":"Kirill Mokevnin"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","image":"/assets/images/logging/cover.png","headline":"Что такое логирование?","dateModified":"2021-01-18T00:00:00+00:00","datePublished":"2021-01-18T00:00:00+00:00","description":"Журнал логов – специальное место, куда записывается информация о происходящих процессах в работающем коде. Приложение «логирует» туда информацию, которая, потенциально, может понадобиться для анализа различных ситуаций, возникающих в рабочем приложении: ошибках, задержках, сбоях.","mainEntityOfPage":{"@type":"WebPage","@id":"/logging/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/hexlet_logo.png"},"name":"Кирилл Мокевнин"},"url":"/logging/","author":{"@type":"Person","name":"Кирилл Мокевнин"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -66,7 +68,7 @@
 
       <div class="container mb-4">
         <div class="d-flex flex-wrap justify-content-center py-3">
-          <a class="navbar-brand me-auto" href=""><img width="30" alt="Code Basics logo" src="assets/images/hexlet_logo.png"></a>
+          <a class="navbar-brand me-auto" href="/"><img width="30" alt="Code Basics logo" src="/assets/images/hexlet_logo.png"></a>
           <ul class="nav nav-pills">
             <li class="nav-item">
               <a class="nav-link" target="_blank" href="https://ru.hexlet.io/programs" alt="Программы обучения">Программы обучения</a>
@@ -79,39 +81,22 @@
         ================================================== -->
         <main class="container">
           <!-- Begin Article
-================================================== -->
+  ================================================== -->
 
-	<div class="row">
-		
+  <div class="row">
+    <div class="col-sm-8 mx-auto">
+      <!-- Post Featured Image -->
+      
+      <!-- End Featured Image -->
+      <div class="mainheading">
+        <h1 class="posttitle">Что такое логирование?</h1> 
+      </div>
 
-		<!-- Post -->        
-        
-        
-		<div class="col-sm-8 mx-auto">
-            <!-- Post Featured Image -->
-			
-			<!-- End Featured Image -->
-			<div class="mainheading">             
-                
-                <!-- Post Categories -->
-                <div class="after-post-tags">
-                    <ul class="tags">
-                        
-                        
-                    </ul>
-                </div>
-                <!-- End Categories -->
-                
-                <!-- Post Title -->
-				<h1 class="posttitle">Что такое логирование?</h1> 
-                
-			</div>
 
-			
 
-			<!-- Post Content -->
-			<div class="article-post serif-font">
-				<p>Известно, что программисты проводят много времени, отлаживая свои программы, пытаясь разобраться, почему они не работают — или работают неправильно. Когда говорят про отладку, обычно подразумевают либо отладочную печать, либо использование специальных программ – дебагеров. С их помощью отслеживается выполнение кода по шагам, во время которого видно, как меняется содержимое переменных. Эти способы хорошо работают в небольших программах, но в реальных приложениях быстро становятся неэффективными.</p>
+      <!-- Post Content -->
+      <div class="article-post serif-font">
+        <p>Известно, что программисты проводят много времени, отлаживая свои программы, пытаясь разобраться, почему они не работают — или работают неправильно. Когда говорят про отладку, обычно подразумевают либо отладочную печать, либо использование специальных программ – дебагеров. С их помощью отслеживается выполнение кода по шагам, во время которого видно, как меняется содержимое переменных. Эти способы хорошо работают в небольших программах, но в реальных приложениях быстро становятся неэффективными.</p>
 
 <p><img src="/assets/images/logging/debugger.png" alt="Дебагер JavaScript в WebStorm" /></p>
 
@@ -240,34 +225,36 @@ sets by chunk 9.14 KiB <span class="o">(</span>auxiliary <span class="nb">id </s
 
 <p>Здесь тоже есть несколько путей. Можно воспользоваться готовыми решениями, такими как <a href="https://docs.datadoghq.com/logs/">DataDog Logging</a>, либо устанавливать и настраивать все самостоятельно через, например, <a href="https://www.elastic.co/elastic-stack">ELK Stack</a></p>
 
-                <div class="clearfix"></div>
-			</div>
+        <div class="clearfix"></div>
+      </div>
 
-            <!-- Prev/Next -->
-            <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
-              
-                <div class="col-md-6 rightborder pl-0">
-                    <a class="thepostlink" href="/hosting/">&laquo; Что такое домен и хостинг?</a>
-                </div>
-              
-              
-                <div class="col-md-6 text-right pr-0">
-                    <a class="thepostlink" href="/configuration-management/">Что такое "управление конфигурацией"? &raquo;</a>
-                </div>
-              
-            </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
-            
-            <!-- Begin Comments
-            ================================================== -->
-            <section>
-            <div id="comments">                          
-                <section class="disqus">
+      
+      <div class="lead text-end my-5">
+        <i>Кирилл Мокевнин</i>
+      </div>
+      
+
+      <!-- Prev/Next -->
+      <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
+        
+        <div class="col-md-6 rightborder pl-0">
+          <a class="thepostlink" href="/hosting/">&laquo; Что такое домен и хостинг?</a>
+        </div>
+        
+        
+        <div class="col-md-6 text-right pr-0">
+          <a class="thepostlink" href="/configuration-management/">Что такое "управление конфигурацией"? &raquo;</a>
+        </div>
+        
+      </div>
+      <!-- End Prev/Next -->
+
+
+      <!-- Begin Comments
+        ================================================== -->
+        <section>
+          <div id="comments">
+            <section class="disqus">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'hexlet-guides'; 
@@ -281,21 +268,16 @@ sets by chunk 9.14 KiB <span class="o">(</span>auxiliary <span class="nb">id </s
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
- 
-            </div>
-            </section>
-            <!--End Comments
-            ================================================== -->
-            
-            
 
-		</div>
-		<!-- End Post -->
-		<!-- Sidebar -->
-	</div>
+          </div>
+        </section>
+    </div>
+    <!-- End Post -->
+    <!-- Sidebar -->
+  </div>
 
-<!-- End Article
-================================================== -->
+  <!-- End Article
+    ================================================== -->
 
         </main>
 
