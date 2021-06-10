@@ -5,11 +5,13 @@ Just customize your theme here.
 
 body {}
 
+/* TODO: Временное исправление отступов внутри подсветки */
 .highlight {
   padding: 10px;
   border: 1px solid #dee2e6;
+  margin-bottom: 1rem;
 }
 
 pre {
-  margin: 0px;
+  margin-bottom: 0px;
 }
