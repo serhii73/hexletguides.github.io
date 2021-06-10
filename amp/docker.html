@@ -1,26 +1,8 @@
 <!doctype html>
 <html amp lang="ru_RU">
-  <head><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Как и для чего использовать Docker | Гайды для программистов</title>
-<meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Как и для чего использовать Docker" />
-<meta name="author" content="Кирилл Мокевнин" />
-<meta property="og:locale" content="ru_RU" />
-<meta name="description" content="Изоляция процессов в операционной системе без тяжелой виртуализации." />
-<meta property="og:description" content="Изоляция процессов в операционной системе без тяжелой виртуализации." />
-<link rel="canonical" href="/docker/" />
-<meta property="og:url" content="/docker/" />
-<meta property="og:site_name" content="Гайды для программистов" />
-<meta property="og:image" content="https://guides.hexlet.io/assets/images/docker/docker_cover.png" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-01-30T00:00:00+00:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://guides.hexlet.io/assets/images/docker/docker_cover.png" />
-<meta property="twitter:title" content="Как и для чего использовать Docker" />
-<script type="application/ld+json">
-{"@type":"BlogPosting","description":"Изоляция процессов в операционной системе без тяжелой виртуализации.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://guides.hexlet.io/assets/images/hexlet_logo.png"},"name":"Кирилл Мокевнин"},"headline":"Как и для чего использовать Docker","dateModified":"2018-01-30T00:00:00+00:00","datePublished":"2018-01-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/docker/"},"url":"/docker/","author":{"@type":"Person","name":"Кирилл Мокевнин"},"image":"https://guides.hexlet.io/assets/images/docker/docker_cover.png","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>Как и для чего использовать Docker</title>
     <link rel="canonical" href="https://guides.hexlet.io/docker/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -2409,7 +2391,6 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + 2px); }
 
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-      <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     
@@ -2436,6 +2417,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 id="установка">Установка</h2>
 
 <p>Докер поставляется в виде Community Edition (CE) и Enterprise Edition (EE). Нас интересует CE. На <a href="https://www.docker.com/community-edition">главной странице</a> этой версии доступны ссылки для скачивания под все популярные платформы. Выберите вашу и установите Докер.</p>
+
+<div class="fs-3 border-start p-4 mb-3 bg-light border-info border-3 banner">
+    <a href="https://ru.hexlet.io/programs/devops-for-programmers?utm_source=hexlet-guides&amp;utm_medium=referral" target="_blank">Интенсив: Девопс для программистов. Вся база за 3 месяца
+</a>
+</div>
 
 <p>В работе Докера есть одна деталь, которую важно знать при установке на Mac и Linux. По умолчанию Докер работает через unix сокет. В целях безопасности сокет закрыт для пользователей, не входящих в группу <em>docker</em>. И хотя установщик добавляет текущего пользователя в эту группу автоматически, Докер сразу не заработает. Дело в том, что если пользователь меняет группу сам себе, то ничего не изменится до тех пор, пока пользователь не перелогинится. Такова особенность работы ядра. Для проверки того, в какие группы входит ваш пользователь, можно набрать команду <code class="language-plaintext highlighter-rouge">id</code>.</p>
 
